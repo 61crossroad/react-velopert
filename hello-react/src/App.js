@@ -25,16 +25,16 @@ function App() {
 }
 */
 
-import './App.css';
+import "./App.css";
 
 function App() {
   const name = "React";
   const style = {
-    backgroundColor: 'black',
-    color: 'aqua',
-    fontSize: '48px',
-    fontWeight: 'blod',
-    padding: 16
+    backgroundColor: "black",
+    color: "aqua",
+    fontSize: "48px",
+    fontWeight: "blod",
+    padding: 16,
   };
 
   return (
@@ -51,16 +51,12 @@ function App() {
       }}>
     */
     <div className="react">
-      {name === 'React' ? (
-        <h1>It's a {name}</h1>
-      ) : (
-        <h1> It's not a React</h1>
-      )}
+      {name === "React" ? <h1>It's a {name}</h1> : <h1> It's not a React</h1>}
       {/* <h1>Hello! {name}</h1> */}
       <h2>How are you?</h2>
       <input />
     </div>
-  )
+  );
 }
 
 export default App;
