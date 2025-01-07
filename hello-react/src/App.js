@@ -24,6 +24,9 @@ function App() {
   );
 }
 */
+
+import './App.css';
+
 function App() {
   const name = "React";
   const style = {
@@ -38,7 +41,7 @@ function App() {
     // style doesn't work with Fragment
     // <div style={style}>
     // first { is a javascript expression, then second { for javascript object
-    <div 
+    /* <div 
       style={{
         backgroundColor: 'black',
         color: 'aqua',
@@ -46,6 +49,8 @@ function App() {
         fontWeight: 'blod',
         padding: 16
       }}>
+    */
+    <div className="react">
       {name === 'React' ? (
         <h1>It's a {name}</h1>
       ) : (
@@ -53,6 +58,7 @@ function App() {
       )}
       {/* <h1>Hello! {name}</h1> */}
       <h2>How are you?</h2>
+      <input />
     </div>
   )
 }
