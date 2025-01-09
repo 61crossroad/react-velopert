@@ -40,7 +40,8 @@ class MyComponent extends Component {
                 - It's {name}<br />
                 - bye: {bye}<br />
                 - children: {children}<br />
-                - lucky {favoriteNumber}!
+                * MyComponent is separated..<br />
+                - lucky {favoriteNumber}!<br />
             </div>
         );
     }
