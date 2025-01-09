@@ -22,7 +22,16 @@ class Counter extends Component {
                 <h2>Constant Value: {fixedNumber}</h2>
                 <button
                     onClick={() => {
-                        // this.setState({ number: number + 1});
+                        this.setState(
+                            {
+                                number: number + 1
+                            },
+                            () => {
+                                console.log('setState is called.');
+                                console.log(this.state);
+                            }
+                        );
+                        /*
                         this.setState(prevState => {
                             return {
                                 number: prevState.number +1
@@ -32,6 +41,7 @@ class Counter extends Component {
                         this.setState(prevState => ({
                             number: prevState.number + 1
                         }));
+                        */
                     }}>
                     +1
                 </button>
