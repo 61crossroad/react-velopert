@@ -25,7 +25,7 @@ const MyComponent = ({ name, bye, favoriteNumber, children }) => {
 
 class MyComponent extends Component {
     static defaultProps = {
-        name: 'Javascript'
+        name: 'a Vanila Javascript'
     };
     static propTypes = {
         name: PropTypes.string,
