@@ -9,8 +9,10 @@ const MyComponent = props => {
 };
 */
 
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 
+/*
 const MyComponent = ({ name, bye, favoriteNumber, children }) => {
     return (<div>My Component with Sonny Stitt<br />
             - It's {name}<br />
@@ -19,8 +21,32 @@ const MyComponent = ({ name, bye, favoriteNumber, children }) => {
             - lucky {favoriteNumber}!
             </div>);
 };
+*/
 
-// ## These Things don't work...
+class MyComponent extends Component {
+    static defaultProps = {
+        name: 'Javascript'
+    };
+    static propTypes = {
+        name: PropTypes.string,
+        favoriteNumber: PropTypes.number.isRequired
+    };
+
+    render() {
+        const { name, bye, favoriteNumber, children } = this.props;
+        return (
+            <div>
+                My Component with Sonny Stitt<br />
+                - It's {name}<br />
+                - bye: {bye}<br />
+                - children: {children}<br />
+                - lucky {favoriteNumber}!
+            </div>
+        );
+    }
+}
+
+/* ## These Things only work in the class component, why..?
 MyComponent.defaultProps = {
     name: 'Javascript',
     bye: 'Bye!',
@@ -31,5 +57,6 @@ MyComponent.propTypes = {
     name: PropTypes.string,
     favoriteNumber: PropTypes.number.isRequired
 };
+*/
 
 export default MyComponent;
