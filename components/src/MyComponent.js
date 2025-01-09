@@ -1,9 +1,20 @@
+/*
 const MyComponent = props => {
+    const { name, bye, children } = props;
     return <div>My Component with Sonny Stitt<br />
-            It's {props.name}<br />
-            - bye: {props.bye}<br />
-            - children: {props.children}
+            - It's {name}<br />
+            - bye: {bye}<br />
+            - children: {children}
             </div>;
+};
+*/
+
+const MyComponent = ({ name, bye, children }) => {
+    return (<div>My Component with Sonny Stitt<br />
+            - It's {name}<br />
+            - bye: {bye}<br />
+            - children: {children}
+            </div>);
 };
 
 MyComponent.defaultProps = {
