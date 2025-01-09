@@ -15,6 +15,7 @@ class Counter extends Component {
         fixedNumber: 0
     }
     render() {
+        // const number is modifiable?!
         const { number, fixedNumber } = this.state;
         return (
             <div>
