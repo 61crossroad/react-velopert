@@ -8,6 +8,7 @@ const MyComponent = props => {
             </div>;
 };
 */
+import PropTypes from 'prop-types';
 
 const MyComponent = ({ name, bye, children }) => {
     return (<div>My Component with Sonny Stitt<br />
@@ -21,6 +22,10 @@ MyComponent.defaultProps = {
     name: 'Javascript',
     bye: 'Bye!',
     children: 'No babies'
+};
+
+MyComponent.propTypes = {
+    name: PropTypes.string
 };
 
 export default MyComponent;
