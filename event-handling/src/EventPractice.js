@@ -6,6 +6,25 @@ class EventPractice extends Component {
         message: ''
     };
 
+    constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleChange(e) {
+        this.setState({
+            message: e.target.value
+        });
+    }
+
+    handleClick(e) {
+        alert(this.state.message);
+        this.setState({
+            message: ''
+        });
+    }
+
     render() {
         return (
             <div>
@@ -15,7 +34,8 @@ class EventPractice extends Component {
                     name="message"
                     placeholder="Type something"
                     value={this.state.message}
-                    onChange={
+                    onChange={this.handleChange}
+                    /* onChange={
                         (e) => {
                             // console.log(e);
                             // console.log(e.target.value);
@@ -23,7 +43,7 @@ class EventPractice extends Component {
                                 message: e.target.value
                             })
                         }
-                    }
+                    } */
                 />
                 <button onClick={
                     () => {
@@ -32,7 +52,8 @@ class EventPractice extends Component {
                             message: ''
                         });
                     }
-                }>Confirm</button>
+                }>Confirm 1</button>
+                <button onClick={this.handleClick}>Confirm 2</button>
             </div>
         );
     }
