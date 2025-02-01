@@ -47,6 +47,12 @@ class EventPractice extends Component {
         });
     };
 
+    handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            this.handleClick();
+        }
+    };
+
     render() {
         return (
             <div>
@@ -73,6 +79,7 @@ class EventPractice extends Component {
                             })
                         }
                     } */
+                   onKeyDown={this.handleKeyPress}
                 />
                 <button onClick={
                     () => {
