@@ -6,6 +6,7 @@ class EventPractice extends Component {
         message: ''
     };
 
+    /*
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
@@ -24,6 +25,20 @@ class EventPractice extends Component {
             message: ''
         });
     }
+    */
+
+    handleChange = (e) => {
+        this.setState({
+            message: e.target.value
+        });
+    };
+
+    handleClick = () => {
+        alert(this.state.message);
+        this.setState({
+            message: ''
+        });
+    };
 
     render() {
         return (
