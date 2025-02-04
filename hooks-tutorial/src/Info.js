@@ -12,9 +12,16 @@ const Info = () => {
         });
     });
     */
-   useEffect(() => {
+   
+    /*
+    useEffect(() => {
     console.log('Executed when this component is mounted');
-   }, []);
+    }, []);
+    */
+
+    useEffect(() => {
+        console.log(name);
+    }, [name]);
 
     const onChangeName = e => {
         setName(e.target.value);
