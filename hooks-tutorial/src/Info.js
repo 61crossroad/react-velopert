@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 const Info = () => {
     const [name, setName] = useState('');
     const [nickname, setNickname] = useState('');
+    /*
     useEffect(() => {
         console.log('Rendering completed!');
         console.log({
@@ -10,6 +11,10 @@ const Info = () => {
             nickname
         });
     });
+    */
+   useEffect(() => {
+    console.log('Executed when this component is mounted');
+   }, []);
 
     const onChangeName = e => {
         setName(e.target.value);
