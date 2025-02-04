@@ -20,8 +20,13 @@ const Info = () => {
     */
 
     useEffect(() => {
+        console.log('effect');
         console.log(name);
-    }, [name]);
+        return () => {
+            console.log('cleanup');
+            console.log(name);
+        }
+    }, [name]); // * [] unmount only
 
     const onChangeName = e => {
         setName(e.target.value);
