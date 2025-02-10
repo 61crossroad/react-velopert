@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Counter from "./Counter";
+// import Counter from "./Counter";
+import Counter from "./CounterReducer";
 import Info from "./Info";
 
 const App = () => {
