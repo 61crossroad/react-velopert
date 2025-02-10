@@ -19,6 +19,7 @@ const Info = () => {
     }, []);
     */
 
+    /*
     useEffect(() => {
         console.log('effect');
         console.log(name);
@@ -26,7 +27,16 @@ const Info = () => {
             console.log('cleanup');
             console.log(name);
         }
-    }, [name]); // * [] unmount only
+    }, [name]);
+    */
+
+    // unmount only
+    useEffect(() => {
+        console.log('effect');
+        return () => {
+            console.log('unmount');
+        }
+    }, []);
 
     const onChangeName = e => {
         setName(e.target.value);
