@@ -1,7 +1,8 @@
 import { useState } from "react";
 // import Counter from "./Counter";
 import Counter from "./CounterReducer";
-import Info from "./Info";
+// import Info from "./Info";
+import Info from "./InfoReducer";
 
 const App = () => {
   const [visible, setVisible] = useState(false);
