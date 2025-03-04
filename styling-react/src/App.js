@@ -1,10 +1,15 @@
 import { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SassComponent from './SassComponent';
 
 class App extends Component {
   render() {
     return (
+      <div>
+        <SassComponent />
+      </div>
+      /*
       <div className="App">
       <header>
         <img src={logo} className="logo" alt="logo" />
@@ -21,6 +26,7 @@ class App extends Component {
         </a>
       </header>
     </div>
+    */
     )
   }
 }
