@@ -2,7 +2,8 @@ import { useState } from "react";
 // import Counter from "./Counter";
 import Counter from "./CounterReducer";
 // import Info from "./Info";
-import Info from "./InfoReducer";
+// import Info from "./InfoReducer";
+import Info from "./UseInfo";
 import Average from "./Average";
 
 const App = () => {
